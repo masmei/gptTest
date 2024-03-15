@@ -7,7 +7,7 @@ const PORT = 8000;
 app.use(express.json());
 app.use(cors());
 
-const API_KEY = "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";
+const API_KEY = process.env.OPENAI_API_KEY;
 
 app.post("/completion", async (req, res) => {
   try {
